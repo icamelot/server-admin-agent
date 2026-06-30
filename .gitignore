@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+dist/
+
+# Logs
+logs/*.jsonl
+logs/*.log
+
+# Secrets & keys (CRITICAL)
+.ssh/*
+*.pem
+*.key
+
+# Environment & IDE
+.env
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Output
+output_to_user/
+
+# Task artifacts (git-ignored scratch)
+.superpowers/sdd/
