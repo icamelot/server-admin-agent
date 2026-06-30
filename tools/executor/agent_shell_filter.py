@@ -138,7 +138,7 @@ def validate_totp(code: str, secret: str) -> bool:
     try:
         import pyotp
         totp = pyotp.TOTP(secret)
-        return totp.verify(code, valid_window=1)
+        return totp.verify(code, valid_window=0)
     except ImportError:
         # Fallback: pyotp not installed on server, reject
         return False

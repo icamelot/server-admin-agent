@@ -172,11 +172,15 @@ class CommandExecutor:
                 text=True,
                 timeout=30,
             )
+            stderr_text = proc.stderr or ""
+            approved_effective = approved and not (
+                "REJECTED" in stderr_text
+            )
             result = ExecutionResult(
                 exit_code=proc.returncode,
                 stdout=proc.stdout or "",
-                stderr=proc.stderr or "",
-                approved=approved,
+                stderr=stderr_text,
+                approved=approved_effective,
                 needs_approval=False,
                 target=target,
                 command=command,
@@ -202,7 +206,7 @@ class CommandExecutor:
                 command=command,
             )
 
-        self.audit.log_entry(target, command, category, approved, vars(result))
+        self.audit.log_entry(target, command, category, result.approved, vars(result))
         return vars(result)
 
     def unlock(self) -> None:
