@@ -1,7 +1,6 @@
 """Command parser — splits chained commands and blocks injection patterns."""
 
 import re
-import shlex
 
 
 class CommandSecurityError(Exception):
