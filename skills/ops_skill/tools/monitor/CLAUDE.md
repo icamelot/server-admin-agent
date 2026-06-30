@@ -15,4 +15,4 @@ python3 skills/ops_skill/tools/monitor/monitor_daemon.py --config skills/ops_ski
 - Completely independent of cron — runs as a persistent process
 
 ### Threshold Config
-Edit `config/thresholds.yaml` to adjust thresholds and server list.
+Edit `skills/ops_skill/config/thresholds.yaml` to adjust thresholds and server list.

@@ -11,7 +11,7 @@ from skills.ops_skill.tools.monitor.monitor_daemon import MonitorDaemon
 @pytest.fixture
 def daemon():
     return MonitorDaemon(
-        config_path="config/thresholds.yaml",
+        config_path="skills/ops_skill/config/thresholds.yaml",
         ssh_key_path="/tmp/test_key",
         ssh_user="agent",
     )

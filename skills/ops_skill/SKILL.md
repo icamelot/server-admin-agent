@@ -1,4 +1,4 @@
-# ops_skill
+# ops-skill
 
 Server operations toolkit — secure remote command execution, monitoring daemon with threshold-based alerting, and rate-limited TOTP-guarded SSH access.
 
@@ -62,7 +62,7 @@ Every modifying command passes through:
 
 ## Configuration
 
-Edit `config/thresholds.yaml` to adjust:
+Edit `skills/ops_skill/config/thresholds.yaml` to adjust:
 - Disk/memory/CPU warning and critical thresholds
 - Check interval (seconds)
 - Server list with hostnames and optional jump hosts
